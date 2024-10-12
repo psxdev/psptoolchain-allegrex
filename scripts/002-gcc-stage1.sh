@@ -47,7 +47,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
   ## Check if using MacPorts
   if command -v port &> /dev/null; then
     MACPORT_BASE=`which port|sed s#/bin/port##g`
-    TARG_XTRA_OPTS="--with-gmp=$MACPORT_BASE/include --with-mpfr=$MACPORT_BASE/include --with-mpc=$MACPORT_BASE/include"
+    TARG_XTRA_OPTS="--with-gmp=$MACPORT_BASE --with-mpfr=$MACPORT_BASE --with-mpc=$MACPORT_BASE"
   fi
 fi
 
